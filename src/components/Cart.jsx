@@ -49,7 +49,7 @@ const Cart = () => {
                   </div>
                   <div className="flex items-center space-x-4">
                     <div className="flex items-center space-x-2">
-                      <button className="text-orange-500 hover:text-orange-600">
+                      <button className="text-orange-500 hover:text-orange-600 transform hover:scale-110 transition-all duration-300">
                         <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M20 12H4" />
                         </svg>
@@ -100,7 +100,7 @@ const Cart = () => {
                 </div>
               </div>
               <button
-                className="w-full bg-orange-500 text-white py-3 rounded-md mt-6 hover:bg-orange-600 transition duration-300"
+                className="w-full bg-orange-500 text-white py-3 rounded-md mt-6 hover:bg-orange-600 hover:shadow-lg transform hover:-translate-y-0.5 transition-all duration-300"
                 onClick={() => console.log('Proceed to checkout')}
               >
                 Proceed to Checkout

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import DeliveryTracking from './DeliveryTracking';
 
 const Orders = () => {
   const [activeTab, setActiveTab] = useState('current');
@@ -88,7 +89,7 @@ const Orders = () => {
         {orders[activeTab].map((order) => (
           <div
             key={order.id}
-            className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition duration-300"
+            className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300"
           >
             <div className="flex justify-between items-start mb-4">
               <div>
@@ -119,14 +120,24 @@ const Orders = () => {
               </div>
             </div>
             {activeTab === 'current' && (
-              <div className="mt-4 flex justify-end space-x-4">
-                <button className="text-gray-600 hover:text-gray-800">
-                  Track Order
-                </button>
-                <button className="text-red-600 hover:text-red-800">
-                  Cancel Order
-                </button>
-              </div>
+              <>
+                <div className="mt-4 flex justify-end space-x-4">
+                  <button className="text-gray-600 hover:text-gray-800 hover:underline transform hover:scale-105 transition-all duration-300">
+                    Track Order
+                  </button>
+                  <button className="text-red-600 hover:text-red-800 hover:underline transform hover:scale-105 transition-all duration-300">
+                    Cancel Order
+                  </button>
+                </div>
+                
+                {/* Add Delivery Tracking */}
+                <div className="mt-6">
+                  <DeliveryTracking 
+                    status={order.status}
+                    estimatedTime={order.estimatedDelivery}
+                  />
+                </div>
+              </>
             )}
           </div>
         ))}

@@ -53,11 +53,11 @@ const Restaurants = () => {
         {/* Restaurant Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {filteredRestaurants.map(restaurant => (
-            <div key={restaurant.id} className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition duration-300">
+            <div key={restaurant.id} className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300">
               <img
                 src={restaurant.imageUrl}
                 alt={restaurant.name}
-                className="w-full h-48 object-cover"
+                className="w-full h-48 object-cover transform hover:scale-105 transition-all duration-500"
               />
               <div className="p-4">
                 <h3 className="text-xl font-semibold mb-2">{restaurant.name}</h3>
@@ -71,7 +71,7 @@ const Restaurants = () => {
                   <p>Min. Order: ${restaurant.minOrder}</p>
                 </div>
                 <button
-                  className="mt-4 w-full bg-orange-500 text-white py-2 rounded-md hover:bg-orange-600 transition duration-300"
+                  className="mt-4 w-full bg-orange-500 text-white py-2 rounded-md hover:bg-orange-600 hover:shadow-lg transform hover:-translate-y-0.5 transition-all duration-300"
                   onClick={() => console.log(`View menu for ${restaurant.name}`)}
                 >
                   View Menu

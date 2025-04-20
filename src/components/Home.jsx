@@ -11,7 +11,7 @@ const Home = () => {
   return (
     <div>
       {/* Hero Section */}
-      <div className="bg-orange-500 text-white py-16 px-4 rounded-lg mb-12">
+      <div id="hero" className="bg-orange-500 text-white py-16 px-4 rounded-lg mb-12">
         <div className="max-w-3xl mx-auto text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">Delicious Food Delivered to Your Door</h1>
           <p className="text-xl mb-8">Order from your favorite local restaurants with just a few clicks</p>
